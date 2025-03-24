@@ -143,23 +143,22 @@ def main(args=None):
     # moveit_commander.os._exit(0)
 
     dofbot_subscriber = DofbotSubscriber(sbus)
-    # rclpy.spin(dofbot_subscriber)
+    rclpy.spin(dofbot_subscriber)
 
-    # dofbot_subscriber.destroy_node()
-    # rclpy.shutdown()
+    dofbot_subscriber.destroy_node()
+    rclpy.shutdown()
 
-    try:
-        while rclpy.ok():
-            key = get_key()
-            if key == '\x03':  # Ctrl-C
-                break
-            dofbot_subscriber.update_joint_position(key)
-            rclpy.spin_once(dofbot_subscriber, timeout_sec=0)
-    except Exception as e:
-        print(e)
-    finally:
-        dofbot_subscriber.destroy_node()
-        rclpy.shutdown()
+    # try:
+    #     while rclpy.ok():
+    #         key = get_key()
+    #         if key == '\x03':  # Ctrl-C
+    #             break
+    #         rclpy.spin_once(dofbot_subscriber, timeout_sec=0)
+    # except Exception as e:
+    #     print(e)
+    # finally:
+    #     dofbot_subscriber.destroy_node()
+    #     rclpy.shutdown()
 
 
 if __name__ == '__main__':
