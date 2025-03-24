@@ -1,0 +1,37 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/sharp/ros2_ws/install/tutorial_interfaces/include/**",
+        "/home/sharp/ros2_ws/install/turtlesim/include/**",
+        "/home/sharp/ros2_ws/install/more_interfaces/include/**",
+        "/home/sharp/ros2_ws/install/examples_rclcpp_cbg_executor/include/**",
+        "/opt/ros/humble/include/**",
+        "/home/sharp/ros2_ws/src/cpp_parameters/include/**",
+        "/home/sharp/ros2_ws/src/cpp_pubsub/include/**",
+        "/home/sharp/ros2_ws/src/cpp_srvcli/include/**",
+        "/home/sharp/ros2_ws/src/examples/rclcpp/composition/minimal_composition/include/**",
+        "/home/sharp/ros2_ws/src/examples/rclcpp/executors/cbg_executor/include/**",
+        "/home/sharp/ros2_ws/src/examples/rclcpp/wait_set/include/**",
+        "/home/sharp/ros2_ws/src/more_interfaces/include/**",
+        "/home/sharp/ros2_ws/src/my_package/include/**",
+        "/home/sharp/ros2_ws/src/polygon_base/include/**",
+        "/home/sharp/ros2_ws/src/polygon_plugins/include/**",
+        "/home/sharp/ros2_ws/src/ros_tutorials/turtlesim/include/**",
+        "/home/sharp/ros2_ws/src/turtlebot3/turtlebot3_node/include/**",
+        "/home/sharp/ros2_ws/src/tutorial_interfaces/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}
