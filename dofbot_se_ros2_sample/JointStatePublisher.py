@@ -70,7 +70,7 @@ def main(args=None):
             if key == '\x03':  # Ctrl-C
                 break
             joint_state_publisher.update_joint_position(key)
-            rclpy.spin_once(joint_state_publisher, timeout_sec=0)
+            rclpy.spin_once(joint_state_publisher, timeout_sec=0.1)
     except Exception as e:
         print(e)
     finally:

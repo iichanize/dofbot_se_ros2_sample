@@ -26,7 +26,7 @@ class DofbotSubscriber(Node):
         super().__init__('dofbot_subscriber')
         self.subscription = self.create_subscription(
             JointState,
-            '/dofbot_test/joint_command',
+            '/dofbot_test/joint_states',
             self.topic,
             10
         )
@@ -42,6 +42,7 @@ class DofbotSubscriber(Node):
         joints = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
         # Convert received radians [-1.57, 1.57] to degrees [0, 180]
         # 将接收到的弧度[-1.57,1.57]转换成角度[0,180]
+        msg.position[4] *= -1
         for i in range(6): 
             print("input Radian : ",i ,msg.position[i])
             joints[i] = (msg.position[i] * RA2DE) + 90
